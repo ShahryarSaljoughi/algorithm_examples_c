@@ -18,32 +18,18 @@ vector<point> sort(vector<point> points, int low, int high, const point &P0){
 	// the same size as input ! some points are not included in result!
 	// (we notice during sorting that these points are inner points not vertices! )
 	
-	cout<<"sort running low: "<<low<<"high: "<<high<<endl;
-	
-	
 	if (high>low){
 		int mid = (low+high)/2;
 		vector<point> a = sort(points, low, mid, P0);
 		vector<point> b = sort(points, mid+1, high, P0);
 		vector<point> c = combine(a, b, P0);
 		
-		//should be removed:
-		cout<<"sorted and returned : {";
-		for(point p: c){
-			cout<<"("<<p.x<<","<<p.y<<")"<<"  , ";
-		}
-		cout<<"}"<<endl;
 		return c;
 	}
 	else{
 		vector<point> c;
 		c.resize(1);
 		c.at(0) = points.at(low); //or high
-		//should be removed:
-		for(point p: c){
-			cout<<"point  "<<p.x<<","<<p.y<<"is sorted"<<endl;
-		}
-		
 		
 		return c;
 	}
@@ -101,7 +87,7 @@ vector<point> combine(vector<point> &a, vector<point> &b, const point &P0){
 
 double polar_angle(point p0, point p1){
 	double result;
-	if (p0.x=p1.x && p0.y=p1.y){
+	if (p0.x==p1.x && p0.y==p1.y){
 		result = -3.1415926538 - 1;  // sth smaller than -PI
 		return result;
 	}
