@@ -1,4 +1,5 @@
 skyline_problem/junk/
 *.out
 convex_hull/brute_and_force/junk/
-convex_hull/divide_and_conqure/junk/
+convex_hull/GRAHAM/junky/
+convex_hull/GRAHAM/test_sort/
