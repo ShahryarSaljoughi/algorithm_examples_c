@@ -1,5 +1,5 @@
-#ifndef MYALGO_H
-#define MYALGO_H
+#ifndef MYALGO2_H
+#define MYALGO2_H
 
 #include <vector>
 #include "points.h"
